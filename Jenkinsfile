@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage ("build"){
             steps{
-                sh script: 'mvn clean package'
+                sh script: 'clean install package'
             }
         }
         stage('upload war to nexus'){
@@ -24,7 +24,7 @@ pipeline {
                 nexusUrl: '3.88.191.212:8081', 
                 nexusVersion: 'nexus3', 
                 protocol: 'http', 
-                repository: 'http://3.88.191.212:8081/repository/test-maven/', 
+                repository: 'http://3.88.191.212:8081/repository/test-maven', 
                 version: '1.0.0'
             }
         }
