@@ -4,10 +4,16 @@ pipeline {
         maven "maven"
     }
     stages{
+        stage ("build"){
+            steps{
+                sh script: 'mvn clean install '
+            }
+        }
         
         stage('upload war to nexus'){
             steps{
                 nexusArtifactUploader artifacts: [
+
                     [
                         artifactId: 'simple-app',
                         classifier: '',
