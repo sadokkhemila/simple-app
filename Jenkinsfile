@@ -21,12 +21,12 @@ pipeline {
                         type: 'war'
                     ]
                 ],
-                credentialsId: 'nexus-connex',
+                credentialsId: 'nexus-cred',
                 groupId: 'in.javahome', 
-                nexusUrl: '3.88.191.212:8081', 
+                nexusUrl: '51.38.50.55:8081', 
                 nexusVersion: 'nexus3', 
                 protocol: 'http', 
-                repository: 'http://3.88.191.212:8081/repository/test-maven', 
+                repository: 'http://51.38.50.55:8081/repository/testmaven/', 
                 version: '1.0.0'
             }
         }
